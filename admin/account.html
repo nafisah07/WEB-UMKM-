@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Admin - Kirei's Mart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .login-container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            padding: 40px;
+        }
+        
+        .login-logo {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .login-logo h1 {
+            color: #2a1ab3;
+            font-size: 1.8em;
+            margin-bottom: 5px;
+        }
+        
+        .login-logo p {
+            color: #777;
+            font-size: 0.9em;
+        }
+        
+        .login-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #555;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus {
+            border-color: #2a1ab3;
+        }
+        
+        .form-group .password-field {
+            position: relative;
+        }
+        
+        .form-group .password-field i {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #777;
+            cursor: pointer;
+        }
+        
+        .login-button {
+            width: 100%;
+            padding: 12px;
+            background-color: #2a1ab3;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .login-button:hover {
+            background-color: #2a1ab3;
+        }
+        
+        .forgot-password {
+            text-align: center;
+            margin-top: 15px;
+        }
+        
+        .forgot-password a {
+            color: #777;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+        
+        .forgot-password a:hover {
+            color: #2a1ab3;
+            text-decoration: underline;
+        }
+        
+        .back-to-site {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+        }
+        
+        .back-to-site a {
+            color: #2a1ab3;
+            text-decoration: none;
+        }
+        
+        .back-to-site a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-logo">
+            <h1>Kirei's Mart</h1>
+            <p>Admin Panel</p>
+        </div>
+        
+        <div class="login-form">
+            <h2>Login</h2>
+            <form action="dashboard.html">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="password-field">
+                        <input type="password" id="password" name="password" required>
+                        <i class="far fa-eye" id="toggle-password"></i>
+                    </div>
+                </div>
+                
+                <button type="submit" class="login-button">Login</button>
+            </form>
+            
+            <div class="forgot-password">
+                <a href="#">Lupa password?</a>
+            </div>
+            
+            <div class="back-to-site">
+                <a href="../index.html"><i class="fas fa-arrow-left"></i> Kembali ke Website</a>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const togglePassword = document.getElementById('toggle-password');
+            const passwordField = document.getElementById('password');
+            
+            togglePassword.addEventListener('click', function() {
+                const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+                passwordField.setAttribute('type', type);
+                this.classList.toggle('fa-eye');
+                this.classList.toggle('fa-eye-slash');
+            });
+        });
+    </script>
+</body>
+</html>

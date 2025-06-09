@@ -2,49 +2,49 @@ import React from "react";
 
 const products = [
   {
-    img: "image/JAJANAN & MINUMAN/AQUA 1,5L.jpg",
+    img: "/image/JAJANAN & MINUMAN/AQUA 1,5L.jpg",
     name: "Aqua 1,5L",
     price: "Rp 8.000",
     stock: "Tersedia",
   },
   {
-    img: "image/JAJANAN & MINUMAN/BKPIA KEJU & KACANG HIJAU.jpg",
+    img: "/image/JAJANAN & MINUMAN/BKPIA KEJU & KACANG HIJAU.jpg",
     name: "Bakpia Keju & Kacang Hijau",
     price: "Rp 2.000",
     stock: "Tersedia",
   },
   {
-    img: "image/JAJANAN & MINUMAN/CHOCODRINK.jpg",
+    img: "/image/JAJANAN & MINUMAN/CHOCODRINK.jpg",
     name: "Chocodrink",
     price: "Rp 2.000",
     stock: "Tersedia",
   },
   {
-    img: "image/JAJANAN & MINUMAN/CHOCOLATOS COKLAT.jpg",
+    img: "/image/JAJANAN & MINUMAN/CHOCOLATOS COKLAT.jpg",
     name: "Chocolatos Coklat",
     price: "Rp 2.500",
     stock: "Tersedia",
   },
   {
-    img: "image/JAJANAN & MINUMAN/CHOCOLATOS MATCHA.jpg",
+    img: "/image/JAJANAN & MINUMAN/CHOCOLATOS MATCHA.jpg",
     name: "Chocolatos Matcha",
     price: "Rp 2.500",
     stock: "Tersedia",
   },
   {
-    img: "image/JAJANAN & MINUMAN/CHOCOLATOS.jpg",
+    img: "/image/JAJANAN & MINUMAN/CHOCOLATOS.jpg",
     name: "Chocolatos",
     price: "Rp 1.000",
     stock: "Tersedia",
   },
   {
-    img: "image/JAJANAN & MINUMAN/CHOCOPUFF.jpg",
+    img: "/image/JAJANAN & MINUMAN/CHOCOPUFF.jpg",
     name: "Choco Puff",
     price: "Rp unknown",
     stock: "Tersedia",
   },
   {
-    img: "image/JAJANAN & MINUMAN/CRISPY CRAKERS.jpg",
+    img: "/image/JAJANAN & MINUMAN/CRISPY CRAKERS.jpg",
     name: "Crispy Crackers",
     price: "Rp 13.000",
     stock: "Tersedia",

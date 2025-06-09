@@ -93,15 +93,42 @@ export default function Home() {
             flexWrap: "wrap",
           }}
         >
+          {/*
+            Menambahkan Link ke setiap kategori produk
+          */}
+          {/*
+            Daftar kategori produk beserta ikon dan tautannya
+          */}
           {[
-            { label: "Bahan Makanan", icon: "fas fa-box" },
-            { label: "Bumbu Masakan", icon: "fas fa-utensils" },
-            { label: "Jajanan dan Minuman", icon: "fas fa-coffee" },
-            { label: "Mie", icon: "fas fa-bacon" },
-            { label: "Nonfood", icon: "fas fa-pump-soap" },
-            { label: "Obat-obatan", icon: "fas fa-capsules" },
+            {
+              label: "Bahan Makanan",
+              icon: "fas fa-box",
+              link: "/category-bahan-makanan",
+            },
+            {
+              label: "Bumbu Masakan",
+              icon: "fas fa-utensils",
+              link: "/category-bumbu-masakan",
+            },
+            {
+              label: "Jajanan dan Minuman",
+              icon: "fas fa-coffee",
+              link: "/category-jajanan-minuman",
+            },
+            { label: "Mie", icon: "fas fa-bacon", link: "/category-mie" },
+            {
+              label: "Nonfood",
+              icon: "fas fa-pump-soap",
+              link: "/category-nonfood",
+            },
+            {
+              label: "Obat-obatan",
+              icon: "fas fa-capsules",
+              link: "/category-obat",
+            },
           ].map((cat, idx) => (
-            <div
+            <Link
+              to={cat.link}
               key={idx}
               style={{
                 background: "#fff",
@@ -110,6 +137,12 @@ export default function Home() {
                 padding: 24,
                 minWidth: 120,
                 textAlign: "center",
+                textDecoration: "none",
+                color: "inherit",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                transition: "box-shadow 0.2s, border 0.2s, background 0.2s",
               }}
             >
               <i
@@ -117,7 +150,7 @@ export default function Home() {
                 style={{ fontSize: 32, color: "#1976d2", marginBottom: 8 }}
               ></i>
               <div style={{ fontWeight: 500, marginTop: 8 }}>{cat.label}</div>
-            </div>
+            </Link>
           ))}
         </div>
       </section>

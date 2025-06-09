@@ -135,29 +135,29 @@ const Products = () => {
         <div className="container">
           <ul>
             <li>
-              <a href="index.html">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a href="about.html">Tentang Kami</a>
+              <Link to="/about">Tentang Kami</Link>
             </li>
             <li className="dropdown">
-              <a href="products.html" className="active">
+              <Link to="/products" className="active">
                 Produk <i className="fas fa-chevron-down"></i>
-              </a>
+              </Link>
               <div className="dropdown-content">
-                <a href="category-bahan-makanan.html">Bahan Makanan</a>
-                <a href="category-bumbu-masakan.html">Bumbu Masakan</a>
-                <a href="category-jajanan-minuman.html">Jajanan dan Minuman</a>
-                <a href="category-mie.html">Mie</a>
-                <a href="category-nonfood.html">Nonfood</a>
-                <a href="category-obat.html">Obat-obatan</a>
+                <Link to="/category-bahan-makanan">Bahan Makanan</Link>
+                <Link to="/category-bumbu-masakan">Bumbu Masakan</Link>
+                <Link to="/category-jajanan-minuman">Jajanan dan Minuman</Link>
+                <Link to="/category-mie">Mie</Link>
+                <Link to="/category-nonfood">Nonfood</Link>
+                <Link to="/category-obat">Obat-obatan</Link>
               </div>
             </li>
             <li>
-              <a href="reviews.html">Ulasan</a>
+              <Link to="/reviews">Ulasan</Link>
             </li>
             <li>
-              <a href="contact.html">Kontak</a>
+              <Link to="/contact">Kontak</Link>
             </li>
           </ul>
         </div>
@@ -400,6 +400,31 @@ const Products = () => {
         </div>
       </section>
 
+      {/* Pagination */}
+      <div
+        className="pagination"
+        style={{ textAlign: "center", marginTop: 32 }}
+      >
+        <Link to="/category-nonfood" className="pagination-item">
+          1
+        </Link>
+        <Link to="/category-nonfood-page2" className="pagination-item">
+          2
+        </Link>
+        <Link to="/category-nonfood-page3" className="pagination-item">
+          3
+        </Link>
+        <Link to="/category-nonfood-page4" className="pagination-item">
+          4
+        </Link>
+        <Link to="/category-nonfood-page5" className="pagination-item">
+          5
+        </Link>
+        <Link to="/category-nonfood-page3" className="pagination-item">
+          <i className="fas fa-chevron-right"></i>
+        </Link>
+      </div>
+
       {/* Footer */}
       <footer>
         <div className="container">
@@ -429,24 +454,24 @@ const Products = () => {
               <h3>Kategori</h3>
               <ul>
                 <li>
-                  <a href="category-bahan-makanan.html">Bahan Makanan</a>
+                  <Link to="/category-bahan-makanan">Bahan Makanan</Link>
                 </li>
                 <li>
-                  <a href="category-bumbu-masakan.html">Bumbu Masakan</a>
+                  <Link to="/category-bumbu-masakan">Bumbu Masakan</Link>
                 </li>
                 <li>
-                  <a href="category-jajanan-minuman.html">
+                  <Link to="/category-jajanan-minuman">
                     Jajanan dan Minuman
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="category-mie.html">Mie</a>
+                  <Link to="/category-mie">Mie</Link>
                 </li>
                 <li>
-                  <a href="category-nonfood.html">Nonfood</a>
+                  <Link to="/category-nonfood">Nonfood</Link>
                 </li>
                 <li>
-                  <a href="category-obat.html">Obat-obatan</a>
+                  <Link to="/category-obat">Obat-obatan</Link>
                 </li>
               </ul>
             </div>

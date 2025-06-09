@@ -7,7 +7,7 @@ const initialCart = [
     name: "Beras Premium 5kg",
     desc: "Beras berkualitas tinggi",
     price: 65000,
-    image: "images/beras.jpg",
+    image: "/image/BAHAN MAKANAN/BERAS SANIA 15rb_1kg.jpg",
     qty: 1,
   },
   {
@@ -15,7 +15,7 @@ const initialCart = [
     name: "Minyak Goreng 2L",
     desc: "Minyak goreng berkualitas",
     price: 35000,
-    image: "images/minyak.jpg",
+    image: "/image/BAHAN MAKANAN/FORTUNE 1_2kg 10rb.jpg",
     qty: 2,
   },
 ];
@@ -91,9 +91,9 @@ const Cart = () => {
     const itemsText = cart
       .map(
         (item) =>
-          `- ${item.name} x${item.qty} = Rp${(item.price * item.qty).toLocaleString(
-            "id-ID"
-          )}`
+          `- ${item.name} x${item.qty} = Rp${(
+            item.price * item.qty
+          ).toLocaleString("id-ID")}`
       )
       .join("%0A");
     const message = `Halo Kirei's Mart,%0ASaya ingin memesan:%0A${itemsText}%0A%0ASubtotal: Rp${subtotal.toLocaleString(
@@ -107,10 +107,7 @@ const Cart = () => {
     )}%0A%0AData Penerima:%0ANama: ${customer.name}%0ATelp: ${
       customer.phone
     }%0AAlamat: ${customer.address}`;
-    window.open(
-      `https://wa.me/6281234567890?text=${message}`,
-      "_blank"
-    );
+    window.open(`https://wa.me/6281234567890?text=${message}`, "_blank");
   };
 
   return (
@@ -340,10 +337,12 @@ const Cart = () => {
 
                 <div className="whatsapp-info">
                   <p>
-                    <strong>Catatan:</strong> Setelah klik tombol checkout, Anda akan diarahkan ke WhatsApp untuk menyelesaikan pesanan.
+                    <strong>Catatan:</strong> Setelah klik tombol checkout, Anda
+                    akan diarahkan ke WhatsApp untuk menyelesaikan pesanan.
                   </p>
                   <p>
-                    Pembayaran dapat dilakukan secara tunai saat pengiriman (COD) atau transfer bank.
+                    Pembayaran dapat dilakukan secara tunai saat pengiriman
+                    (COD) atau transfer bank.
                   </p>
                 </div>
               </div>
@@ -368,7 +367,8 @@ const Cart = () => {
             <div className="footer-col">
               <h3>Kirei's Mart</h3>
               <p>
-                Toko sembako online terlengkap dengan harga terjangkau dan pengiriman cepat ke seluruh Indonesia.
+                Toko sembako online terlengkap dengan harga terjangkau dan
+                pengiriman cepat ke seluruh Indonesia.
               </p>
               <div className="social-icons">
                 <a href="#">
@@ -429,7 +429,8 @@ const Cart = () => {
               <h3>Kontak</h3>
               <ul className="contact-info">
                 <li>
-                  <i className="fas fa-map-marker-alt"></i> Jl. Pasar Baru No. 123, Jakarta
+                  <i className="fas fa-map-marker-alt"></i> Jl. Pasar Baru No.
+                  123, Jakarta
                 </li>
                 <li>
                   <i className="fas fa-phone"></i> +62 812-3456-7890

@@ -3,49 +3,49 @@ import "./CategoryMiePage2.css";
 
 const products = [
   {
-    img: "image/Mie/INDOMIE MI CELOR 3500.jpg",
+    img: "/image/Mie/INDOMIE MI CELOR 3500.jpg",
     name: "Indomie Mie Celor",
     price: "Rp 3.500",
     stock: "Tersedia",
   },
   {
-    img: "image/Mie/INDOMIE RENDANG 3500.jpg",
+    img: "/image/Mie/INDOMIE RENDANG 3500.jpg",
     name: "Indomie Rendang",
     price: "Rp 3.500",
     stock: "Tersedia",
   },
   {
-    img: "image/Mie/MIE GAGA 3500.jpg",
+    img: "/image/Mie/MIE GAGA 3500.jpg",
     name: "Mie Gaga",
     price: "Rp 3.500",
     stock: "Tersedia",
   },
   {
-    img: "image/Mie/MIE SEDAAP KUAH SOTO 3500.jpg",
+    img: "/image/Mie/MIE SEDAAP KUAH SOTO 3500.jpg",
     name: "Mie Sedap Kuah Soto",
     price: "Rp 3.500",
     stock: "Tersedia",
   },
   {
-    img: "image/Mie/MIE TELOR.jpg",
+    img: "/image/Mie/MIE TELOR.jpg",
     name: "Mie Telur",
     price: "Rp 3.500",
     stock: "Tersedia",
   },
   {
-    img: "image/Mie/POP MIE 5000.jpg",
+    img: "/image/Mie/POP MIE 5000.jpg",
     name: "Pop Mie",
     price: "Rp 5.000",
     stock: "Tersedia",
   },
   {
-    img: "image/Mie/SARIMI ISI 2 AYAM KECAP 4500.jpg",
+    img: "/image/Mie/SARIMI ISI 2 AYAM KECAP 4500.jpg",
     name: "Sarimi Isi 2 Ayam Kecap",
     price: "Rp 4.500",
     stock: "Tersedia",
   },
   {
-    img: "image/Mie/SOHUN.jpg",
+    img: "/image/Mie/SOHUN.jpg",
     name: "Sohun",
     price: "Rp 3.500",
     stock: "Tersedia",
@@ -63,11 +63,14 @@ const CategoryMiePage2 = () => (
         </div>
         <div className="search-bar">
           <input type="text" placeholder="Cari produk..." />
-          <button><i className="fas fa-search"></i></button>
+          <button>
+            <i className="fas fa-search"></i>
+          </button>
         </div>
         <div className="nav-icons">
           <a href="cart.html">
-            <i className="fas fa-shopping-cart"></i> Keranjang <span className="cart-count">0</span>
+            <i className="fas fa-shopping-cart"></i> Keranjang{" "}
+            <span className="cart-count">0</span>
           </a>
           <a href="account.html">
             <i className="fas fa-user"></i> Akun
@@ -80,8 +83,12 @@ const CategoryMiePage2 = () => (
     <nav>
       <div className="container">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">Tentang Kami</a></li>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="about.html">Tentang Kami</a>
+          </li>
           <li className="dropdown">
             <a href="products.html" className="active">
               Produk <i className="fas fa-chevron-down"></i>
@@ -90,13 +97,19 @@ const CategoryMiePage2 = () => (
               <a href="category-bahan-makanan.html">Bahan Makanan</a>
               <a href="category-bumbu-masakan.html">Bumbu Masakan</a>
               <a href="category-jajanan-minuman.html">Jajanan dan Minuman</a>
-              <a href="category-mie.html" className="active">Mie</a>
+              <a href="category-mie.html" className="active">
+                Mie
+              </a>
               <a href="category-nonfood.html">Nonfood</a>
               <a href="category-obat.html">Obat-obatan</a>
             </div>
           </li>
-          <li><a href="reviews.html">Ulasan</a></li>
-          <li><a href="contact.html">Kontak</a></li>
+          <li>
+            <a href="reviews.html">Ulasan</a>
+          </li>
+          <li>
+            <a href="contact.html">Kontak</a>
+          </li>
         </ul>
       </div>
     </nav>
@@ -105,7 +118,10 @@ const CategoryMiePage2 = () => (
     <section className="category-hero">
       <div className="container">
         <h1>Mie</h1>
-        <p>Mie instan, mie telur, bihun, soun, dan aneka mie lainnya untuk hidangan praktis dan lezat</p>
+        <p>
+          Mie instan, mie telur, bihun, soun, dan aneka mie lainnya untuk
+          hidangan praktis dan lezat
+        </p>
       </div>
     </section>
 
@@ -140,7 +156,7 @@ const CategoryMiePage2 = () => (
             </select>
           </div>
         </div>
-        
+
         <div className="products-grid">
           {products.map((p, i) => (
             <div className="product-card" key={i}>
@@ -159,12 +175,20 @@ const CategoryMiePage2 = () => (
             </div>
           ))}
         </div>
-        
+
         <div className="pagination">
-          <a href="category-mie.html" className="pagination-item">1</a>
-          <a href="category-mie-page2.html" className="pagination-item active">2</a>
-          <a href="category-mie-page3.html" className="pagination-item">3</a>
-          <a href="category-mie-page3.html" className="pagination-item"><i className="fas fa-chevron-right"></i></a>
+          <a href="category-mie.html" className="pagination-item">
+            1
+          </a>
+          <a href="category-mie-page2.html" className="pagination-item active">
+            2
+          </a>
+          <a href="category-mie-page3.html" className="pagination-item">
+            3
+          </a>
+          <a href="category-mie-page3.html" className="pagination-item">
+            <i className="fas fa-chevron-right"></i>
+          </a>
         </div>
       </div>
     </section>
@@ -175,42 +199,84 @@ const CategoryMiePage2 = () => (
         <div className="footer-grid">
           <div className="footer-col">
             <h3>Kirei's Mart</h3>
-            <p>Toko sembako online terlengkap dengan harga terjangkau dan pengiriman cepat ke seluruh Indonesia.</p>
+            <p>
+              Toko sembako online terlengkap dengan harga terjangkau dan
+              pengiriman cepat ke seluruh Indonesia.
+            </p>
             <div className="social-icons">
-              <a href="#"><i className="fab fa-facebook"></i></a>
-              <a href="#"><i className="fab fa-instagram"></i></a>
-              <a href="#"><i className="fab fa-twitter"></i></a>
-              <a href="#"><i className="fab fa-whatsapp"></i></a>
+              <a href="#">
+                <i className="fab fa-facebook"></i>
+              </a>
+              <a href="#">
+                <i className="fab fa-instagram"></i>
+              </a>
+              <a href="#">
+                <i className="fab fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i className="fab fa-whatsapp"></i>
+              </a>
             </div>
           </div>
           <div className="footer-col">
             <h3>Kategori</h3>
             <ul>
-              <li><a href="category-bahan-makanan.html">Bahan Makanan</a></li>
-              <li><a href="category-bumbu-masakan.html">Bumbu Masakan</a></li>
-              <li><a href="category-jajanan-minuman.html">Jajanan dan Minuman</a></li>
-              <li><a href="category-mie.html">Mie</a></li>
-              <li><a href="category-nonfood.html">Nonfood</a></li>
-              <li><a href="category-obat.html">Obat-obatan</a></li>
+              <li>
+                <a href="category-bahan-makanan.html">Bahan Makanan</a>
+              </li>
+              <li>
+                <a href="category-bumbu-masakan.html">Bumbu Masakan</a>
+              </li>
+              <li>
+                <a href="category-jajanan-minuman.html">Jajanan dan Minuman</a>
+              </li>
+              <li>
+                <a href="category-mie.html">Mie</a>
+              </li>
+              <li>
+                <a href="category-nonfood.html">Nonfood</a>
+              </li>
+              <li>
+                <a href="category-obat.html">Obat-obatan</a>
+              </li>
             </ul>
           </div>
           <div className="footer-col">
             <h3>Informasi</h3>
             <ul>
-              <li><a href="about.html">Tentang Kami</a></li>
-              <li><a href="contact.html">Hubungi Kami</a></li>
-              <li><a href="faq.html">FAQ</a></li>
-              <li><a href="privacy.html">Kebijakan Privasi</a></li>
-              <li><a href="terms.html">Syarat & Ketentuan</a></li>
+              <li>
+                <a href="about.html">Tentang Kami</a>
+              </li>
+              <li>
+                <a href="contact.html">Hubungi Kami</a>
+              </li>
+              <li>
+                <a href="faq.html">FAQ</a>
+              </li>
+              <li>
+                <a href="privacy.html">Kebijakan Privasi</a>
+              </li>
+              <li>
+                <a href="terms.html">Syarat & Ketentuan</a>
+              </li>
             </ul>
           </div>
           <div className="footer-col">
             <h3>Kontak</h3>
             <ul className="contact-info">
-              <li><i className="fas fa-map-marker-alt"></i> Jl. Pasar Baru No. 123, Jakarta</li>
-              <li><i className="fas fa-phone"></i> +62 812-3456-7890</li>
-              <li><i className="fas fa-envelope"></i> info@kireimart.com</li>
-              <li><i className="fas fa-clock"></i> Senin - Minggu: 08:00 - 20:00</li>
+              <li>
+                <i className="fas fa-map-marker-alt"></i> Jl. Pasar Baru No.
+                123, Jakarta
+              </li>
+              <li>
+                <i className="fas fa-phone"></i> +62 812-3456-7890
+              </li>
+              <li>
+                <i className="fas fa-envelope"></i> info@kireimart.com
+              </li>
+              <li>
+                <i className="fas fa-clock"></i> Senin - Minggu: 08:00 - 20:00
+              </li>
             </ul>
           </div>
         </div>

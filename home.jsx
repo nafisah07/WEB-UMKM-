@@ -1,7 +1,28 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 export default function Home() {
+  const [cartCount, setCartCount] = useState(0);
+
+  useEffect(() => {
+    const updateCartCount = () => {
+      try {
+        const stored = localStorage.getItem("cart");
+        if (stored) {
+          const cart = JSON.parse(stored);
+          setCartCount(cart.reduce((a, b) => a + (b.qty || 1), 0));
+        } else {
+          setCartCount(0);
+        }
+      } catch {
+        setCartCount(0);
+      }
+    };
+    updateCartCount();
+    window.addEventListener("storage", updateCartCount);
+    return () => window.removeEventListener("storage", updateCartCount);
+  }, []);
+
   return (
     <>
       {/* Header */}
@@ -19,7 +40,8 @@ export default function Home() {
           </div>
           <div className="nav-icons">
             <a href="cart.html">
-              <i className="fas fa-shopping-cart"></i> Keranjang
+              <i className="fas fa-shopping-cart"></i> Keranjang{" "}
+              <span className="cart-count">{cartCount}</span>
             </a>
             <a href="/login">
               <i className="fas fa-user"></i> Akun
